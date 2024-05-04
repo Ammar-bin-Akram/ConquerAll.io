@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8f3a76af5e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/general.css">
+    <title>Add Tasks - ConquerAll</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary text-secondary">
+        <div class="container-fluid  ">
+          <a class="navbar-brand   fw-bold" href="./index.html">ConquerAll</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse mx-5" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active  " aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  " href="./about.html">About</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="alert alert-success d-none js-task-added-alert" role="alert">
+        Task added successfully!
+    </div>
+
+    <section class="add-section container my-5">
+        <h2 class="text-center  " style="font-size: 35px;">Add new task</h2>
+        <form class="add-form align-items-center">
+            <div class="form-floating mb-1">
+                <input type="text" class="form-control js-task-name-input" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Task Name</label>
+            </div>
+            <div class="form-floating mb-1">
+                <textarea class="form-control js-task-description-input" placeholder="Add task description" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Task Description</label>
+            </div>
+            <div class="form-floating mb-1">
+                <select class="form-select js-task-category-input" id="floatingSelect" aria-label="Floating label select example">
+                  <option selected>Select task category</option>
+                  <option value="1">Study</option>
+                  <option value="2">Play</option>
+                  <option value="3">House Chores</option>
+                </select>
+                <label for="floatingSelect">Select Category</label>
+            </div>
+            <div class="form-floating mb-1">
+                <input type="datetime-local" class="form-control js-task-deadline-input" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Deadline</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control js-task-status-input" id="floatingInput" placeholder="name@example.com" value="Not Completed" disabled>
+                <label for="floatingInput">Status</label>
+            </div>
+            <div class="align-items-center btn-div">
+                <button class="btn btn-primary js-add-task-btn" id="liveAlertBtn">Add the task</button>
+            </div>
+        </form>
+
+        <div class="mt-3 btn-div">
+            <a href="./view-tasks.html"><button class="btn btn-light view-btn">View Tasks</button></a>
+        </div>
+    </section>
+
+    
+
+
+    <script src="./scripts/add-tasks.js"></script>
+</body>
+</html>
